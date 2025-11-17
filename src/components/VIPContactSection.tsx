@@ -27,18 +27,26 @@ export const VIPContactSection = () => {
         </div>
 
         {/* CTA Button */}
-        <div>
-          <button
-            onClick={handleContact}
-            className="group relative px-10 py-4 text-white font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-pink via-orange to-pink"></div>
-            <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
-            <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors">
-              <MessageCircle className="w-5 h-5" />
-              Fale com nossa equipe
-            </span>
-          </button>
+        <div className="flex justify-center">
+          <div className="relative">
+            {/* Animated glow effect */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-pink via-orange to-pink rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
+            
+            <button
+              onClick={handleContact}
+              className="group relative px-10 py-4 text-white font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
+            >
+              {/* Shine effect on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              
+              <div className="absolute inset-0 bg-gradient-to-r from-pink via-orange to-pink"></div>
+              <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
+              <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors">
+                <MessageCircle className="w-5 h-5" />
+                Fale com nossa equipe
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
