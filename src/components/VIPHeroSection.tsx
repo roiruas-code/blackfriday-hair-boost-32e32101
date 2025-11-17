@@ -46,22 +46,22 @@ export const VIPHeroSection = () => {
 
       {/* Countdown Timer */}
       <div className="mb-12 animate-fade-in">
-        <div className="text-center space-y-6">
+        <div className="text-center space-y-4 md:space-y-6">
           {/* "Faltam" text */}
-          <div className="text-gold text-xl md:text-2xl font-semibold tracking-wide">
+          <div className="text-gold text-lg md:text-2xl font-semibold tracking-wide">
             Faltam:
           </div>
           
           {/* Timer boxes */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-6">
             {/* Days */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <div className="relative bg-black border-2 border-gold/40 rounded-2xl p-6 md:p-8 min-w-[100px] md:min-w-[140px]">
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[140px]">
+                <div className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                   {String(timeLeft.days).padStart(2, "0")}
                 </div>
-                <div className="text-sm md:text-base text-gray-400 mt-2 uppercase tracking-widest">
+                <div className="text-xs md:text-base text-gray-400 mt-1 md:mt-2 uppercase tracking-wide md:tracking-widest">
                   Dias
                 </div>
               </div>
@@ -69,12 +69,12 @@ export const VIPHeroSection = () => {
 
             {/* Hours */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <div className="relative bg-black border-2 border-gold/40 rounded-2xl p-6 md:p-8 min-w-[100px] md:min-w-[140px]">
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[140px]">
+                <div className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                   {String(timeLeft.hours).padStart(2, "0")}
                 </div>
-                <div className="text-sm md:text-base text-gray-400 mt-2 uppercase tracking-widest">
+                <div className="text-xs md:text-base text-gray-400 mt-1 md:mt-2 uppercase tracking-wide md:tracking-widest">
                   Horas
                 </div>
               </div>
@@ -82,26 +82,26 @@ export const VIPHeroSection = () => {
 
             {/* Minutes */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <div className="relative bg-black border-2 border-gold/40 rounded-2xl p-6 md:p-8 min-w-[100px] md:min-w-[140px]">
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[140px]">
+                <div className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                   {String(timeLeft.minutes).padStart(2, "0")}
                 </div>
-                <div className="text-sm md:text-base text-gray-400 mt-2 uppercase tracking-widest">
-                  Minutos
+                <div className="text-xs md:text-base text-gray-400 mt-1 md:mt-2 uppercase tracking-wide md:tracking-widest">
+                  Min
                 </div>
               </div>
             </div>
 
             {/* Seconds */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <div className="relative bg-black border-2 border-gold/40 rounded-2xl p-6 md:p-8 min-w-[100px] md:min-w-[140px]">
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent animate-pulse">
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[140px]">
+                <div className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent animate-pulse">
                   {String(timeLeft.seconds).padStart(2, "0")}
                 </div>
-                <div className="text-sm md:text-base text-gray-400 mt-2 uppercase tracking-widest">
-                  Segundos
+                <div className="text-xs md:text-base text-gray-400 mt-1 md:mt-2 uppercase tracking-wide md:tracking-widest">
+                  Seg
                 </div>
               </div>
             </div>
