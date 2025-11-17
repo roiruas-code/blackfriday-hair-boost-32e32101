@@ -78,10 +78,6 @@ export const Footer = () => {
                 <span>(62) 99678-4841</span>
               </li>
               <li className="flex items-start gap-3 text-gray-500 text-xs mt-4">
-                <div className="flex-shrink-0 text-gold font-semibold">CNPJ:</div>
-                <span>55.469.468/0001-11</span>
-              </li>
-              <li className="flex items-start gap-3 text-gray-500 text-xs">
                 <div className="flex-shrink-0 text-gold font-semibold">Razão Social:</div>
                 <span>Ayvora Lifecare Produtos Naturais e Suplementos LTDA</span>
               </li>
