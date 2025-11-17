@@ -1,5 +1,4 @@
-import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
-import phoenixLogo from "@/assets/phoenix-logo.png";
+import { Mail, Phone, Instagram } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,35 +7,7 @@ export const Footer = () => {
     <footer className="relative bg-black border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 py-8 md:py-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6">
-          {/* Brand Section */}
-          <div className="space-y-3">
-            <img 
-              src={phoenixLogo} 
-              alt="Phoenix Hair" 
-              className="h-10 w-auto opacity-80"
-            />
-            <p className="text-gray-500 text-sm leading-relaxed">
-              A marca referência em suplementação capilar. Resultados comprovados 
-              por milhares de clientes satisfeitos.
-            </p>
-            <div className="flex gap-3">
-              <a 
-                href="#" 
-                className="w-9 h-9 bg-white/5 hover:bg-gold/20 rounded-full flex items-center justify-center transition-all hover:scale-110 border border-white/5"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-4 h-4 text-gray-400 hover:text-gold transition-colors" />
-              </a>
-              <a 
-                href="#" 
-                className="w-9 h-9 bg-white/5 hover:bg-gold/20 rounded-full flex items-center justify-center transition-all hover:scale-110 border border-white/5"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4 text-gray-400 hover:text-gold transition-colors" />
-              </a>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-6">
 
           {/* Instagram Links */}
           <div className="space-y-3">
