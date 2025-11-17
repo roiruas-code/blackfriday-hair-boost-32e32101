@@ -54,14 +54,25 @@ export const VIPHeroSection = () => {
         {/* Animated glow effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light opacity-20 blur-3xl animate-pulse"></div>
         
-        <img 
-          src={phoenixLogo} 
-          alt="Phoenix Hair" 
-          className="h-40 md:h-56 lg:h-64 xl:h-72 w-auto relative z-10 animate-[pulse_3s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300 object-contain"
-          style={{
-            filter: 'drop-shadow(0 0 30px rgba(255, 215, 0, 0.4))'
-          }}
-        />
+        {/* Text Logo */}
+        <div className="relative z-10 text-center space-y-1 animate-[pulse_3s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300">
+          <div className="text-xs md:text-sm tracking-[0.3em] text-gray-400 font-light uppercase">
+            AMERICANO
+          </div>
+          <div className="text-5xl md:text-7xl lg:text-8xl font-serif tracking-wider">
+            <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-400 bg-clip-text text-transparent font-bold">
+              PHOEN
+            </span>
+            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent font-bold">
+              X
+            </span>
+          </div>
+          <div className="text-xl md:text-2xl lg:text-3xl tracking-[0.5em] font-light">
+            <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-400 bg-clip-text text-transparent">
+              HAIR
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Countdown Timer */}
