@@ -29,20 +29,28 @@ export const VIPBenefitsSection = () => {
         </div>
 
         {/* Benefits Grid */}
-        <div className="max-w-3xl mx-auto space-y-5">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="group flex items-start gap-4 p-5 bg-white/[0.02] rounded-2xl border border-white/5 hover:border-gold/30 hover:bg-white/[0.04] transition-all duration-300"
-            >
-              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-gold-dark via-gold to-gold-light flex items-center justify-center">
-                <CheckCircle className="w-4 h-4 text-black" strokeWidth={3} />
-              </div>
-              <p className="text-lg text-white/90 leading-relaxed pt-0.5">
-                {benefit}
-              </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            {/* Golden border glow */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20"></div>
+            
+            {/* Main container */}
+            <div className="relative bg-black border-2 border-gold/60 rounded-3xl p-6 md:p-10 space-y-5">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="group flex items-start gap-4 p-5 bg-white/[0.02] rounded-2xl border border-white/5 hover:border-gold/30 hover:bg-white/[0.04] transition-all duration-300"
+                >
+                  <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-gold-dark via-gold to-gold-light flex items-center justify-center border-2 border-gold/50">
+                    <CheckCircle className="w-4 h-4 text-black" strokeWidth={3} />
+                  </div>
+                  <p className="text-lg text-white/90 leading-relaxed pt-0.5">
+                    {benefit}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
