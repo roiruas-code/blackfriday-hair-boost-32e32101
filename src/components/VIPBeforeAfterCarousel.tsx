@@ -42,7 +42,7 @@ export const VIPBeforeAfterCarousel = () => {
   };
 
   return (
-    <section className="relative py-6 md:py-10 px-4 bg-black">
+    <section id="depoimentos" className="relative py-6 md:py-10 px-4 bg-black scroll-mt-4">
       <div className="max-w-5xl mx-auto">
         {/* Carousel */}
         <div className="relative">
