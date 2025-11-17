@@ -11,7 +11,7 @@ const benefits = [
 
 export const VIPBenefitsSection = () => {
   return (
-    <section className="relative py-8 md:py-12 px-4 bg-black">
+    <section id="beneficios" className="relative py-8 md:py-12 px-4 bg-black scroll-mt-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 md:mb-8 space-y-2 md:space-y-3">

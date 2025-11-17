@@ -33,8 +33,15 @@ export const VIPHeroSection = () => {
     console.log("Redirecionar para grupo VIP");
   };
 
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById('depoimentos');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
       {/* Logo */}
       <div className="mb-4 md:mb-6 animate-fade-in">
         <img 
@@ -167,6 +174,22 @@ export const VIPHeroSection = () => {
           </button>
         </div>
       </div>
+
+      {/* Scroll Down Indicator */}
+      <button
+        onClick={scrollToNextSection}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer group"
+        aria-label="Rolar para próxima seção"
+      >
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-gold text-xs uppercase tracking-wider opacity-70 group-hover:opacity-100 transition-opacity">
+            Veja mais
+          </span>
+          <div className="w-6 h-10 border-2 border-gold/30 rounded-full flex items-start justify-center p-2 group-hover:border-gold/60 transition-colors">
+            <div className="w-1 h-2 bg-gold rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </button>
     </section>
   );
 };

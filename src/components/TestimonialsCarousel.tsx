@@ -33,7 +33,7 @@ export const TestimonialsCarousel = () => {
   };
 
   return (
-    <section className="relative py-8 md:py-12 px-4 bg-black">
+    <section id="resultados" className="relative py-8 md:py-12 px-4 bg-black scroll-mt-4">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-6 md:mb-8 animate-fade-in">

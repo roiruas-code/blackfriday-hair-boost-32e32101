@@ -6,7 +6,7 @@ export const VIPContactSection = () => {
   };
 
   return (
-    <section className="relative py-8 md:py-12 px-4 bg-black">
+    <section id="contato" className="relative py-8 md:py-12 px-4 bg-black scroll-mt-4">
       <div className="max-w-4xl mx-auto">
         <div className="relative">
           {/* Golden border glow */}
