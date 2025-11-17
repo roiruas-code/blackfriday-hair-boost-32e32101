@@ -27,17 +27,17 @@ export const VIPBenefitsSection = () => {
         </div>
 
         {/* Benefits List */}
-        <div className="bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-gold/20 rounded-2xl p-6 md:p-10">
-          <div className="space-y-4 md:space-y-6">
+        <div className="bg-gradient-to-br from-gold/10 via-gold/5 to-transparent backdrop-blur-md border-2 border-gold/40 rounded-3xl p-8 md:p-12 shadow-2xl shadow-gold/20">
+          <div className="space-y-5 md:space-y-7">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3 md:gap-4 group hover:translate-x-2 transition-transform duration-300"
+                className="flex items-start gap-4 md:gap-5 group hover:translate-x-3 transition-all duration-300 bg-gradient-to-r from-white/5 to-transparent hover:from-gold/10 hover:to-transparent p-4 md:p-5 rounded-xl border border-transparent hover:border-gold/30"
               >
-                <div className="flex-shrink-0 w-6 h-6 md:w-7 md:h-7 bg-gold/20 rounded-full flex items-center justify-center group-hover:bg-gold/30 transition-colors">
-                  <Check className="w-4 h-4 md:w-5 md:h-5 text-gold" />
+                <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-gold via-gold-light to-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-gold/50 group-hover:shadow-gold/80">
+                  <Check className="w-5 h-5 md:w-6 md:h-6 text-black font-bold" strokeWidth={3} />
                 </div>
-                <p className="text-base md:text-lg lg:text-xl text-foreground leading-relaxed flex-1">
+                <p className="text-lg md:text-xl lg:text-2xl text-white font-semibold leading-relaxed flex-1 group-hover:text-gold-light transition-colors">
                   {benefit}
                 </p>
               </div>
