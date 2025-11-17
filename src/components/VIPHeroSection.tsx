@@ -41,7 +41,7 @@ export const VIPHeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 pb-8 md:pt-20 md:pb-12 bg-black">
       {/* Logo */}
       <div className="mb-8 md:mb-10 animate-fade-in relative flex justify-center items-center">
         {/* Rotating golden ring around entire logo */}
