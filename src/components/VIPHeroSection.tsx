@@ -158,7 +158,7 @@ export const VIPHeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light"></div>
             <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
             <span className="relative z-10 text-gold group-hover:text-black transition-colors">
-              Garantir Meu Acesso à Black Week
+              QUERO GARANTIR MEU DESCONTO
             </span>
           </button>
         </div>
