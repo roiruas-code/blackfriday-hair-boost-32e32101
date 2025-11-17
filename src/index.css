@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Clean & Modern Theme */
+    /* Luxury Gold Theme */
     --background: 0 0% 0%; /* Pure black background */
     --foreground: 0 0% 100%; /* White text */
     
@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
     
-    --primary: 330 81% 60%; /* Vibrant pink/magenta */
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 100% 51%; /* Vibrant gold */
+    --primary-foreground: 0 0% 0%;
     
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 100%;
@@ -27,38 +27,38 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
     
-    --accent: 25 95% 60%; /* Orange accent */
+    --accent: 38 92% 50%; /* Dark gold accent */
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 330 81% 60% / 0.3;
+    --border: 45 100% 51% / 0.3;
     --input: 0 0% 20%;
-    --ring: 330 81% 60%;
+    --ring: 45 100% 51%;
     
     --radius: 1rem;
     
-    /* Brand Colors */
-    --pink: 330 81% 60%;
-    --pink-light: 320 79% 70%;
-    --orange: 25 95% 60%;
+    /* Luxury Gold Colors */
     --gold: 45 100% 51%;
     --gold-light: 48 100% 67%;
     --gold-dark: 38 92% 40%;
+    --gold-darker: 35 85% 30%;
+    --bronze: 30 60% 45%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(330 81% 60%), hsl(25 95% 60%));
-    --gradient-border: linear-gradient(90deg, hsl(330 81% 60%), hsl(25 95% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(38 92% 40%), hsl(45 100% 51%), hsl(48 100% 67%));
+    --gradient-border: linear-gradient(90deg, hsl(38 92% 40%), hsl(45 100% 51%));
+    --gradient-luxury: linear-gradient(135deg, hsl(30 60% 45%), hsl(45 100% 51%), hsl(48 100% 67%));
 
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 330 81% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 45 100% 51%;
+    --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 10%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 330 81% 60%;
+    --sidebar-ring: 45 100% 51%;
   }
 
   .dark {
@@ -71,8 +71,8 @@ All colors MUST be HSL.
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 330 81% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 100% 51%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 100%;
@@ -80,7 +80,7 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 25 95% 60%;
+    --accent: 38 92% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
@@ -88,23 +88,22 @@ All colors MUST be HSL.
 
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 330 81% 60%;
+    --ring: 45 100% 51%;
     
-    --pink: 330 81% 60%;
-    --pink-light: 320 79% 70%;
-    --orange: 25 95% 60%;
     --gold: 45 100% 51%;
     --gold-light: 48 100% 67%;
-    --gold-dark: 43 95% 38%;
+    --gold-dark: 38 92% 40%;
+    --gold-darker: 35 85% 30%;
+    --bronze: 30 60% 45%;
     
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 330 81% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 45 100% 51%;
+    --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 10%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 330 81% 60%;
+    --sidebar-ring: 45 100% 51%;
   }
 }
 

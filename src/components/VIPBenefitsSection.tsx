@@ -16,7 +16,7 @@ export const VIPBenefitsSection = () => {
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            <span className="bg-gradient-to-r from-pink via-pink-light to-pink bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
               Benefícios de estar
             </span>
             <br />
@@ -33,10 +33,10 @@ export const VIPBenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group flex items-start gap-4 p-5 bg-white/[0.02] rounded-2xl border border-white/5 hover:border-pink/30 hover:bg-white/[0.04] transition-all duration-300"
+              className="group flex items-start gap-4 p-5 bg-white/[0.02] rounded-2xl border border-white/5 hover:border-gold/30 hover:bg-white/[0.04] transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-pink to-orange flex items-center justify-center">
-                <CheckCircle className="w-4 h-4 text-white" strokeWidth={3} />
+              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-gold-dark via-gold to-gold-light flex items-center justify-center">
+                <CheckCircle className="w-4 h-4 text-black" strokeWidth={3} />
               </div>
               <p className="text-lg text-white/90 leading-relaxed pt-0.5">
                 {benefit}
