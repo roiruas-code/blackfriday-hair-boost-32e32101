@@ -96,8 +96,10 @@ export const VIPHeroSection = () => {
       <div className="mt-6 md:mt-8 mb-5 md:mb-6 animate-fade-in">
         <div className="text-center space-y-2 md:space-y-3">
           {/* "Faltam" text */}
-          <div className="text-gold text-base md:text-xl font-semibold tracking-wide">
-            Faltam:
+          <div className="text-xl md:text-3xl font-bold tracking-wider mb-3 md:mb-4">
+            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]">
+              Faltam:
+            </span>
           </div>
           
           {/* Timer boxes */}
