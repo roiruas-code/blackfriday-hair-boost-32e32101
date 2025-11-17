@@ -93,7 +93,7 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="mb-5 md:mb-6 animate-fade-in">
+      <div className="mt-6 md:mt-8 mb-5 md:mb-6 animate-fade-in">
         <div className="text-center space-y-2 md:space-y-3">
           {/* "Faltam" text */}
           <div className="text-gold text-base md:text-xl font-semibold tracking-wide">
