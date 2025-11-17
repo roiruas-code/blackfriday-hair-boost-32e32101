@@ -43,7 +43,7 @@ export const VIPHeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
       {/* Logo */}
-      <div className="mb-6 md:mb-8 animate-fade-in relative flex justify-center items-center">
+      <div className="mb-8 md:mb-10 animate-fade-in relative flex justify-center items-center">
         {/* Rotating golden ring around entire logo */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-2 border-gold/30 animate-[spin_8s_linear_infinite]">
@@ -93,7 +93,7 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="mt-5 md:mt-6 mb-5 md:mb-6 animate-fade-in">
+      <div className="mt-6 md:mt-8 mb-5 md:mb-6 animate-fade-in">
         <div className="text-center space-y-3 md:space-y-4">
           {/* "Faltam" text */}
           <div className="text-base md:text-2xl font-serif font-bold tracking-wider mb-3 md:mb-4">
