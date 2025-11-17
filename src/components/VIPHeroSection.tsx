@@ -44,46 +44,53 @@ export const VIPHeroSection = () => {
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
       {/* Logo */}
       <div className="mb-4 md:mb-6 animate-fade-in relative flex justify-center items-center">
-        {/* Rotating golden ring */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full border-2 border-gold/30 animate-[spin_8s_linear_infinite]">
+        {/* Rotating golden ring around entire logo */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-2 border-gold/30 animate-[spin_8s_linear_infinite]">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gold shadow-lg shadow-gold/50"></div>
           </div>
         </div>
         
         {/* Animated glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light opacity-20 blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light opacity-20 blur-3xl"></div>
         
         {/* Text Logo */}
-        <div className="relative z-10 text-center animate-[pulse_3s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300">
+        <div className="relative z-10 text-center hover:scale-105 transition-transform duration-300">
           {/* AMERICANO */}
           <div className="text-[0.5rem] md:text-xs tracking-[0.4em] text-gray-400/80 font-light uppercase mb-2 md:mb-3">
             AMERICANO
           </div>
           
-          {/* PHOEN X with icon */}
-          <div className="flex items-center justify-center gap-2 md:gap-4 mb-2 md:mb-3">
-            <div className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-wide">
+          {/* PHOEN I X */}
+          <div className="flex items-center justify-center gap-1 md:gap-2 mb-2 md:mb-3">
+            <div className="text-4xl md:text-6xl lg:text-7xl font-serif">
               <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-400 bg-clip-text text-transparent font-bold" style={{ letterSpacing: '0.05em' }}>
                 PHOEN
               </span>
             </div>
             
-            {/* Hair follicle icon */}
-            <div className="relative w-8 h-12 md:w-12 md:h-16 lg:w-16 lg:h-20">
-              <svg viewBox="0 0 40 60" className="w-full h-full">
-                {/* Golden outer lines */}
-                <path d="M 5 20 Q 5 45, 20 55" stroke="hsl(45 100% 51%)" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                <path d="M 35 20 Q 35 45, 20 55" stroke="hsl(45 100% 51%)" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                {/* Black inner curve */}
-                <path d="M 20 10 Q 10 30, 20 50 Q 30 30, 20 10" stroke="black" strokeWidth="2" fill="none"/>
-                {/* Top line */}
-                <line x1="5" y1="20" x2="20" y2="10" stroke="black" strokeWidth="1.5"/>
-                <line x1="35" y1="20" x2="20" y2="10" stroke="black" strokeWidth="1.5"/>
+            {/* Letter I as icon */}
+            <div className="relative w-6 h-12 md:w-8 md:h-16 lg:w-10 lg:h-20 flex items-center justify-center">
+              <svg viewBox="0 0 40 80" className="w-full h-full">
+                {/* Vertical line with golden gradient */}
+                <line x1="20" y1="15" x2="20" y2="65" stroke="url(#goldGradient)" strokeWidth="3" strokeLinecap="round"/>
+                {/* Top horizontal bar */}
+                <line x1="10" y1="15" x2="30" y2="15" stroke="url(#goldGradient)" strokeWidth="3" strokeLinecap="round"/>
+                {/* Bottom horizontal bar */}
+                <line x1="10" y1="65" x2="30" y2="65" stroke="url(#goldGradient)" strokeWidth="3" strokeLinecap="round"/>
+                
+                {/* Gradient definition */}
+                <defs>
+                  <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="hsl(38 92% 40%)" />
+                    <stop offset="50%" stopColor="hsl(45 100% 51%)" />
+                    <stop offset="100%" stopColor="hsl(48 100% 67%)" />
+                  </linearGradient>
+                </defs>
               </svg>
             </div>
             
-            <div className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-wide">
+            <div className="text-4xl md:text-6xl lg:text-7xl font-serif">
               <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent font-bold" style={{ letterSpacing: '0.05em' }}>
                 X
               </span>
