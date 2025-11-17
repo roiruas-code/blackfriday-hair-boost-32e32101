@@ -71,20 +71,26 @@ export const VIPHeroSection = () => {
             
             {/* Letter I as icon */}
             <div className="relative w-6 h-12 md:w-8 md:h-16 lg:w-10 lg:h-20 flex items-center justify-center">
-              <svg viewBox="0 0 40 80" className="w-full h-full">
+              {/* Glow effect behind I */}
+              <div className="absolute inset-0 bg-gold/30 blur-xl rounded-full animate-pulse"></div>
+              
+              <svg viewBox="0 0 40 80" className="w-full h-full relative z-10" style={{ filter: 'drop-shadow(0 0 10px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 215, 0, 0.5))' }}>
                 {/* Vertical line with golden gradient */}
-                <line x1="20" y1="15" x2="20" y2="65" stroke="url(#goldGradient)" strokeWidth="3" strokeLinecap="round"/>
+                <line x1="20" y1="15" x2="20" y2="65" stroke="url(#goldGradient)" strokeWidth="3.5" strokeLinecap="round"/>
                 {/* Top horizontal bar */}
-                <line x1="10" y1="15" x2="30" y2="15" stroke="url(#goldGradient)" strokeWidth="3" strokeLinecap="round"/>
+                <line x1="10" y1="15" x2="30" y2="15" stroke="url(#goldGradient)" strokeWidth="3.5" strokeLinecap="round"/>
                 {/* Bottom horizontal bar */}
-                <line x1="10" y1="65" x2="30" y2="65" stroke="url(#goldGradient)" strokeWidth="3" strokeLinecap="round"/>
+                <line x1="10" y1="65" x2="30" y2="65" stroke="url(#goldGradient)" strokeWidth="3.5" strokeLinecap="round"/>
+                
+                {/* Shine overlay */}
+                <line x1="22" y1="20" x2="22" y2="40" stroke="rgba(255,255,255,0.4)" strokeWidth="1" strokeLinecap="round"/>
                 
                 {/* Gradient definition */}
                 <defs>
                   <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="hsl(38 92% 40%)" />
+                    <stop offset="0%" stopColor="hsl(48 100% 67%)" />
                     <stop offset="50%" stopColor="hsl(45 100% 51%)" />
-                    <stop offset="100%" stopColor="hsl(48 100% 67%)" />
+                    <stop offset="100%" stopColor="hsl(38 92% 40%)" />
                   </linearGradient>
                 </defs>
               </svg>
