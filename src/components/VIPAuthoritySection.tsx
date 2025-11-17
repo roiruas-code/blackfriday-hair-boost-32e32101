@@ -6,7 +6,7 @@ export const VIPAuthoritySection = () => {
   };
 
   return (
-    <section className="relative py-16 px-6 bg-black">
+    <section className="relative py-8 md:py-12 px-4 bg-black">
       <div className="max-w-4xl mx-auto">
         {/* Container with golden border */}
         <div className="relative">
@@ -14,11 +14,11 @@ export const VIPAuthoritySection = () => {
           <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20"></div>
           
           {/* Main content */}
-          <div className="relative bg-black border-2 border-gold/60 rounded-3xl p-8 md:p-12">
-            <div className="space-y-8">
+          <div className="relative bg-black border-2 border-gold/60 rounded-3xl p-6 md:p-10">
+            <div className="space-y-4 md:space-y-6">
               {/* Image in circular frame */}
               <div className="flex justify-center animate-fade-in">
-                <div className="relative w-32 h-32 md:w-40 md:h-40">
+                <div className="relative w-28 h-28 md:w-36 md:h-36">
                   {/* Golden ring */}
                   <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-gold-dark via-gold to-gold-light opacity-30 blur-md"></div>
                   <div className="absolute -inset-1 rounded-full border-2 border-gold/60"></div>
@@ -35,8 +35,8 @@ export const VIPAuthoritySection = () => {
               </div>
 
               {/* Title */}
-              <div className="space-y-4 text-center">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <div className="space-y-2 md:space-y-3 text-center">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                   <span className="text-white">O propósito Phoenix é </span>
                   <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                     Transformar Sua Saúde
@@ -47,7 +47,7 @@ export const VIPAuthoritySection = () => {
               </div>
 
               {/* Description */}
-              <div className="max-w-2xl mx-auto space-y-4 text-gray-400 text-sm md:text-base leading-relaxed text-center">
+              <div className="max-w-2xl mx-auto space-y-3 text-gray-400 text-sm md:text-base leading-relaxed text-center">
                 <p>
                   Nosso propósito é devolver a vitalidade e a confiança para mulheres que querem viver plenamente cada fase da vida.
                 </p>
@@ -69,8 +69,8 @@ export const VIPAuthoritySection = () => {
               </div>
 
               {/* Highlight Text */}
-              <div className="pt-2 text-center">
-                <p className="text-lg md:text-xl font-bold">
+              <div className="pt-1 text-center">
+                <p className="text-base md:text-lg font-bold">
                   <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                     Porque você pode, merece e vai viver com muito mais vitalidade e{" "}
                   </span>
@@ -79,7 +79,7 @@ export const VIPAuthoritySection = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="pt-4 text-center">
+              <div className="pt-2 md:pt-3 text-center">
                 <div className="relative inline-block">
                   {/* Animated glow effect */}
                   <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>

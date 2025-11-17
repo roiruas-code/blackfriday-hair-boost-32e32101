@@ -42,7 +42,7 @@ export const VIPBeforeAfterCarousel = () => {
   };
 
   return (
-    <section className="relative py-12 md:py-20 px-4 bg-black">
+    <section className="relative py-6 md:py-10 px-4 bg-black">
       <div className="max-w-5xl mx-auto">
         {/* Carousel */}
         <div className="relative">
@@ -87,7 +87,7 @@ export const VIPBeforeAfterCarousel = () => {
           </div>
 
           {/* Dots navigation */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4">
             {testimonials.map((_, index) => (
               <button
                 key={index}

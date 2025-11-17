@@ -6,11 +6,11 @@ export const Footer = () => {
 
   return (
     <footer className="relative bg-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 py-8 md:py-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6">
           {/* Brand Section */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <img 
               src={phoenixLogo} 
               alt="Phoenix Hair" 
@@ -39,7 +39,7 @@ export const Footer = () => {
           </div>
 
           {/* Links Section */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h3 className="text-white font-semibold text-base">Links Úteis</h3>
             <ul className="space-y-2">
               <li>
@@ -66,7 +66,7 @@ export const Footer = () => {
           </div>
 
           {/* Contact Section */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h3 className="text-white font-semibold text-base">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-gray-500 text-sm">
@@ -86,9 +86,9 @@ export const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 pt-8">
+        <div className="border-t border-white/10 pt-6">
           {/* Legal Links */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-3">
             <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6">
               <a 
                 href="#" 

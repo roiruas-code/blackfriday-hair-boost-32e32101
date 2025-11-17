@@ -34,26 +34,26 @@ export const VIPHeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-black">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
       {/* Logo */}
-      <div className="mb-8 animate-fade-in">
+      <div className="mb-4 md:mb-6 animate-fade-in">
         <img 
           src={phoenixLogo} 
           alt="Phoenix Hair" 
-          className="h-32 md:h-40 w-auto drop-shadow-2xl"
+          className="h-24 md:h-32 w-auto drop-shadow-2xl"
         />
       </div>
 
       {/* Countdown Timer */}
-      <div className="mb-12 animate-fade-in">
-        <div className="text-center space-y-4 md:space-y-6">
+      <div className="mb-6 md:mb-8 animate-fade-in">
+        <div className="text-center space-y-2 md:space-y-3">
           {/* "Faltam" text */}
-          <div className="text-gold text-lg md:text-2xl font-semibold tracking-wide">
+          <div className="text-gold text-base md:text-xl font-semibold tracking-wide">
             Faltam:
           </div>
           
           {/* Timer boxes */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-6">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
             {/* Days */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
@@ -110,18 +110,18 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Badge */}
-      <div className="mb-8 animate-fade-in">
+      <div className="mb-4 md:mb-5 animate-fade-in">
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full blur-sm opacity-75"></div>
-          <div className="relative px-6 py-2.5 bg-black rounded-full border-2 border-transparent bg-clip-padding">
+          <div className="relative px-5 py-2 bg-black rounded-full border-2 border-transparent bg-clip-padding">
             <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-100" style={{ margin: '-2px', zIndex: -1 }}></div>
-            <span className="text-white font-semibold text-sm tracking-wide">Black Week Phoenix</span>
+            <span className="text-white font-semibold text-xs md:text-sm tracking-wide">Black Week Phoenix</span>
           </div>
         </div>
       </div>
 
       {/* Main Title */}
-      <div className="max-w-5xl mx-auto text-center space-y-4 md:space-y-6 mb-8 md:mb-12">
+      <div className="max-w-5xl mx-auto text-center space-y-2 md:space-y-3 mb-4 md:mb-6">
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight">
           <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
             A Black Friday que você esperava.
@@ -137,9 +137,9 @@ export const VIPHeroSection = () => {
 
         {/* Date Badge */}
         <div className="flex justify-center pt-2">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+          <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
             <Calendar className="w-4 h-4 text-gold" />
-            <span className="text-white text-sm">
+            <span className="text-white text-xs md:text-sm">
               Black Friday <span className="text-gold font-bold">26 de Novembro</span>
             </span>
           </div>
@@ -154,7 +154,7 @@ export const VIPHeroSection = () => {
           
           <button
             onClick={handleCTA}
-            className="group relative px-12 py-5 text-white font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
+            className="group relative px-8 md:px-12 py-3 md:py-5 text-white font-bold text-base md:text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
           >
             {/* Shine effect on hover */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
