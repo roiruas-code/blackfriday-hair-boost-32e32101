@@ -117,7 +117,7 @@ export const Footer = () => {
               © {currentYear} Phoenix Hair. Todos os direitos reservados.
             </p>
             <p className="text-gray-600 text-xs mt-2">
-              CNPJ: 00.000.000/0001-00 | Produto aprovado pela ANVISA
+              CNPJ: 55.469.468/0001-11 | Produto aprovado pela ANVISA
             </p>
           </div>
         </div>
