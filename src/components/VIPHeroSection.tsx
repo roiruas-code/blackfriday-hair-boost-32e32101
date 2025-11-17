@@ -43,11 +43,17 @@ export const VIPHeroSection = () => {
   return (
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
       {/* Logo */}
-      <div className="mb-4 md:mb-6 animate-fade-in">
+      <div className="mb-4 md:mb-6 animate-fade-in relative">
+        {/* Animated glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light opacity-40 blur-2xl animate-pulse"></div>
+        
         <img 
           src={phoenixLogo} 
           alt="Phoenix Hair" 
-          className="h-32 md:h-40 lg:h-48 w-auto drop-shadow-2xl"
+          className="h-32 md:h-40 lg:h-48 w-auto drop-shadow-2xl relative z-10 animate-[pulse_3s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300"
+          style={{
+            filter: 'drop-shadow(0 0 20px rgba(255, 215, 0, 0.5))'
+          }}
         />
       </div>
 
