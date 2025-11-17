@@ -55,19 +55,43 @@ export const VIPHeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light opacity-20 blur-3xl animate-pulse"></div>
         
         {/* Text Logo */}
-        <div className="relative z-10 text-center space-y-1 animate-[pulse_3s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300">
-          <div className="text-xs md:text-sm tracking-[0.3em] text-gray-400 font-light uppercase">
+        <div className="relative z-10 text-center animate-[pulse_3s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300">
+          {/* AMERICANO */}
+          <div className="text-[0.5rem] md:text-xs tracking-[0.4em] text-gray-400/80 font-light uppercase mb-2 md:mb-3">
             AMERICANO
           </div>
-          <div className="text-5xl md:text-7xl lg:text-8xl font-serif tracking-wider">
-            <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-400 bg-clip-text text-transparent font-bold">
-              PHOEN
-            </span>
-            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent font-bold">
-              X
-            </span>
+          
+          {/* PHOEN X with icon */}
+          <div className="flex items-center justify-center gap-2 md:gap-4 mb-2 md:mb-3">
+            <div className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-wide">
+              <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-400 bg-clip-text text-transparent font-bold" style={{ letterSpacing: '0.05em' }}>
+                PHOEN
+              </span>
+            </div>
+            
+            {/* Hair follicle icon */}
+            <div className="relative w-8 h-12 md:w-12 md:h-16 lg:w-16 lg:h-20">
+              <svg viewBox="0 0 40 60" className="w-full h-full">
+                {/* Golden outer lines */}
+                <path d="M 5 20 Q 5 45, 20 55" stroke="hsl(45 100% 51%)" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                <path d="M 35 20 Q 35 45, 20 55" stroke="hsl(45 100% 51%)" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                {/* Black inner curve */}
+                <path d="M 20 10 Q 10 30, 20 50 Q 30 30, 20 10" stroke="black" strokeWidth="2" fill="none"/>
+                {/* Top line */}
+                <line x1="5" y1="20" x2="20" y2="10" stroke="black" strokeWidth="1.5"/>
+                <line x1="35" y1="20" x2="20" y2="10" stroke="black" strokeWidth="1.5"/>
+              </svg>
+            </div>
+            
+            <div className="text-4xl md:text-6xl lg:text-7xl font-serif tracking-wide">
+              <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent font-bold" style={{ letterSpacing: '0.05em' }}>
+                X
+              </span>
+            </div>
           </div>
-          <div className="text-xl md:text-2xl lg:text-3xl tracking-[0.5em] font-light">
+          
+          {/* HAIR */}
+          <div className="text-lg md:text-2xl lg:text-3xl tracking-[0.5em] font-light">
             <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-400 bg-clip-text text-transparent">
               HAIR
             </span>
