@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Clock } from "lucide-react";
+import { Calendar } from "lucide-react";
 import phoenixLogo from "@/assets/phoenix-logo.png";
 
 export const VIPHeroSection = () => {
@@ -31,78 +30,65 @@ export const VIPHeroSection = () => {
   }, []);
 
   const handleCTA = () => {
-    // Aqui você pode adicionar a lógica de redirecionamento para o grupo VIP
     console.log("Redirecionar para grupo VIP");
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-b from-black via-primary/10 to-black">
-      <div className="max-w-4xl mx-auto text-center space-y-8">
-        {/* Logo */}
-        <div className="flex justify-center mb-8 animate-fade-in">
-          <img 
-            src={phoenixLogo} 
-            alt="Phoenix Hair" 
-            className="h-16 md:h-20 w-auto drop-shadow-2xl"
-          />
-        </div>
-        {/* Countdown Timer */}
-        <div className="space-y-4">
-          <div className="flex items-center justify-center gap-2">
-            <Clock className="w-6 h-6 text-gold" />
-            <span className="text-gold font-semibold text-lg">
-              Faltam {timeLeft.days} {timeLeft.days === 1 ? "dia" : "dias"}
-            </span>
-          </div>
-          
-          <div className="flex justify-center gap-3">
-            {[
-              { value: timeLeft.days, label: "DIAS" },
-              { value: timeLeft.hours, label: "HORAS" },
-              { value: timeLeft.minutes, label: "MIN" },
-              { value: timeLeft.seconds, label: "SEG" },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-black/80 to-primary/50 backdrop-blur-sm border-2 border-gold/50 rounded-xl p-3 md:p-4 min-w-[70px] md:min-w-[90px]"
-              >
-                <div className="text-3xl md:text-4xl font-bold text-gold">
-                  {String(item.value).padStart(2, "0")}
-                </div>
-                <div className="text-xs text-muted-foreground mt-1">
-                  {item.label}
-                </div>
-              </div>
-            ))}
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-black">
+      {/* Logo */}
+      <div className="mb-12 animate-fade-in">
+        <img 
+          src={phoenixLogo} 
+          alt="Phoenix Hair" 
+          className="h-14 md:h-16 w-auto opacity-90"
+        />
+      </div>
+
+      {/* Badge */}
+      <div className="mb-8 animate-fade-in">
+        <div className="relative group">
+          <div className="absolute inset-0 bg-gradient-to-r from-pink via-orange to-pink rounded-full blur-sm opacity-75"></div>
+          <div className="relative px-6 py-2.5 bg-black rounded-full border-2 border-transparent bg-clip-padding">
+            <div className="absolute inset-0 bg-gradient-to-r from-pink via-orange to-pink rounded-full opacity-100" style={{ margin: '-2px', zIndex: -1 }}></div>
+            <span className="text-white font-semibold text-sm tracking-wide">Black Week Phoenix</span>
           </div>
         </div>
+      </div>
 
-        {/* Main Title */}
-        <div className="space-y-6">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
-              A Black Friday que você mais esperava.
-            </span>{" "}
-            <span className="text-foreground">
-              Descontos nunca vistos para o fim da queda e o crescimento dos fios.
+      {/* Main Title */}
+      <div className="max-w-5xl mx-auto text-center space-y-6 mb-12">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          <span className="text-white">Prepare-se para a </span>
+          <span className="bg-gradient-to-r from-pink via-pink-light to-pink bg-clip-text text-transparent">
+            Ultra Black Week
+          </span>
+          <br />
+          <span className="text-white">Da Phoenix Hair</span>
+        </h1>
+
+        {/* Date Badge */}
+        <div className="flex justify-center">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <Calendar className="w-4 h-4 text-pink" />
+            <span className="text-white text-sm">
+              Abertura no dia <span className="text-pink font-bold">26 de Novembro</span>
             </span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Entre para nossa lista VIP e seja a primeira a receber ofertas com até{" "}
-            <span className="text-gold font-bold">70% de desconto</span> em nosso
-            tratamento. Os estoques são limitados!
-          </p>
+          </div>
         </div>
+      </div>
 
-        {/* CTA Button */}
-        <Button
+      {/* CTA Button */}
+      <div className="animate-fade-in">
+        <button
           onClick={handleCTA}
-          size="lg"
-          className="w-full md:w-auto bg-gradient-to-r from-gold via-gold-light to-gold hover:from-gold-dark hover:via-gold hover:to-gold-light text-black font-bold text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 rounded-full shadow-2xl shadow-gold/50 hover:shadow-gold/80 hover:scale-105 transition-all duration-300"
+          className="group relative px-12 py-5 text-white font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
         >
-          QUERO GARANTIR MEU DESCONTO
-        </Button>
+          <div className="absolute inset-0 bg-gradient-to-r from-pink via-orange to-pink"></div>
+          <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
+          <span className="relative z-10 group-hover:text-white transition-colors">
+            Garantir Meu Acesso à Black Week
+          </span>
+        </button>
       </div>
     </section>
   );
