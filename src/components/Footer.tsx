@@ -71,15 +71,19 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-gray-500 text-sm">
                 <Mail className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>contato@phoenixhair.com.br</span>
+                <span>suporte@phoenixhair.com.br</span>
               </li>
               <li className="flex items-center gap-3 text-gray-500 text-sm">
                 <Phone className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>(11) 9 9999-9999</span>
+                <span>(62) 99678-4841</span>
               </li>
-              <li className="flex items-center gap-3 text-gray-500 text-sm">
-                <MapPin className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>São Paulo, Brasil</span>
+              <li className="flex items-start gap-3 text-gray-500 text-xs mt-4">
+                <div className="flex-shrink-0 text-gold font-semibold">CNPJ:</div>
+                <span>55.469.468/0001-11</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-500 text-xs">
+                <div className="flex-shrink-0 text-gold font-semibold">Razão Social:</div>
+                <span>Ayvora Lifecare Produtos Naturais e Suplementos LTDA</span>
               </li>
             </ul>
           </div>
