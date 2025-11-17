@@ -58,12 +58,12 @@ export const VIPHeroSection = () => {
       {/* Main Title */}
       <div className="max-w-5xl mx-auto text-center space-y-6 mb-12">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-          <span className="text-white">Prepare-se para a </span>
           <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-            Ultra Black Week
+            A Black Friday que você mais esperava.
+          </span>{" "}
+          <span className="text-white">
+            Descontos nunca vistos para o fim da queda e o crescimento dos fios.
           </span>
-          <br />
-          <span className="text-white">Da Phoenix Hair</span>
         </h1>
 
         {/* Date Badge */}
