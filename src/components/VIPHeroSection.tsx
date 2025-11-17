@@ -121,18 +121,22 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Main Title */}
-      <div className="max-w-5xl mx-auto text-center space-y-6 mb-12">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+      <div className="max-w-5xl mx-auto text-center space-y-4 md:space-y-6 mb-8 md:mb-12">
+        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight">
           <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-            A Black Friday que você mais esperava.
+            A Black Friday que você esperava.
           </span>{" "}
           <span className="text-white">
-            Descontos nunca vistos para o fim da queda e o crescimento dos fios.
+            Descontos exclusivos até 70% OFF.
           </span>
         </h1>
+        
+        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto px-4">
+          Entre para a lista VIP e garanta acesso antecipado aos melhores descontos para o fim da queda e crescimento capilar.
+        </p>
 
         {/* Date Badge */}
-        <div className="flex justify-center">
+        <div className="flex justify-center pt-2">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
             <Calendar className="w-4 h-4 text-gold" />
             <span className="text-white text-sm">
