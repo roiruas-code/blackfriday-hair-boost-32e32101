@@ -10,8 +10,8 @@ export const VIPAuthoritySection = () => {
       <div className="max-w-4xl mx-auto text-center space-y-12">
         {/* Icon */}
         <div className="flex justify-center animate-fade-in">
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-pink/20 to-orange/20 flex items-center justify-center backdrop-blur-sm">
-            <Heart className="w-12 h-12 text-pink" fill="currentColor" />
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-gold/20 to-gold-dark/20 flex items-center justify-center backdrop-blur-sm">
+            <Heart className="w-12 h-12 text-gold" fill="currentColor" />
           </div>
         </div>
 
@@ -19,7 +19,7 @@ export const VIPAuthoritySection = () => {
         <div className="space-y-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             <span className="text-white">O propósito Phoenix é </span>
-            <span className="bg-gradient-to-r from-pink via-pink-light to-pink bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
               Transformar Sua Saúde
             </span>
             <br />
@@ -52,10 +52,10 @@ export const VIPAuthoritySection = () => {
         {/* Highlight Text */}
         <div className="pt-6">
           <p className="text-xl md:text-2xl font-bold">
-            <span className="bg-gradient-to-r from-pink to-orange bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
               Porque você pode, merece e vai viver com muito mais vitalidade e{" "}
             </span>
-            <span className="text-orange">autoestima.</span>
+            <span className="text-gold">autoestima.</span>
           </p>
         </div>
 
@@ -63,7 +63,7 @@ export const VIPAuthoritySection = () => {
         <div className="pt-8">
           <div className="relative inline-block">
             {/* Animated glow effect */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-pink via-orange to-pink rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
+            <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
             
             <button
               onClick={handleCTA}
@@ -72,9 +72,9 @@ export const VIPAuthoritySection = () => {
               {/* Shine effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               
-              <div className="absolute inset-0 bg-gradient-to-r from-pink via-orange to-pink"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light"></div>
               <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
-              <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors">
+              <span className="relative z-10 flex items-center gap-2 text-gold group-hover:text-black transition-colors">
                 <span>✨</span>
                 Nos vemos no grupo!
               </span>

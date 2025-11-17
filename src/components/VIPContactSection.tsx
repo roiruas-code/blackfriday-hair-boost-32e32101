@@ -11,7 +11,7 @@ export const VIPContactSection = () => {
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
           <span className="text-white">Ainda tem </span>
-          <span className="bg-gradient-to-r from-pink via-pink-light to-pink bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
             dúvidas?
           </span>
         </h2>
@@ -30,7 +30,7 @@ export const VIPContactSection = () => {
         <div className="flex justify-center">
           <div className="relative">
             {/* Animated glow effect */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-pink via-orange to-pink rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
+            <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
             
             <button
               onClick={handleContact}
@@ -39,9 +39,9 @@ export const VIPContactSection = () => {
               {/* Shine effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               
-              <div className="absolute inset-0 bg-gradient-to-r from-pink via-orange to-pink"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light"></div>
               <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
-              <span className="relative z-10 flex items-center gap-3 group-hover:text-white transition-colors">
+              <span className="relative z-10 flex items-center gap-3 text-gold group-hover:text-black transition-colors">
                 <MessageCircle className="w-5 h-5" />
                 Fale com nossa equipe
               </span>

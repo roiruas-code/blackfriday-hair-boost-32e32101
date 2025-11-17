@@ -23,17 +23,17 @@ export const Footer = () => {
             <div className="flex gap-3">
               <a 
                 href="#" 
-                className="w-9 h-9 bg-white/5 hover:bg-pink/20 rounded-full flex items-center justify-center transition-all hover:scale-110 border border-white/5"
+                className="w-9 h-9 bg-white/5 hover:bg-gold/20 rounded-full flex items-center justify-center transition-all hover:scale-110 border border-white/5"
                 aria-label="Instagram"
               >
-                <Instagram className="w-4 h-4 text-gray-400 hover:text-pink transition-colors" />
+                <Instagram className="w-4 h-4 text-gray-400 hover:text-gold transition-colors" />
               </a>
               <a 
                 href="#" 
-                className="w-9 h-9 bg-white/5 hover:bg-pink/20 rounded-full flex items-center justify-center transition-all hover:scale-110 border border-white/5"
+                className="w-9 h-9 bg-white/5 hover:bg-gold/20 rounded-full flex items-center justify-center transition-all hover:scale-110 border border-white/5"
                 aria-label="Facebook"
               >
-                <Facebook className="w-4 h-4 text-gray-400 hover:text-pink transition-colors" />
+                <Facebook className="w-4 h-4 text-gray-400 hover:text-gold transition-colors" />
               </a>
             </div>
           </div>
@@ -43,22 +43,22 @@ export const Footer = () => {
             <h3 className="text-white font-semibold text-base">Links Úteis</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-500 hover:text-pink transition-colors text-sm">
+                <a href="#" className="text-gray-500 hover:text-gold transition-colors text-sm">
                   Sobre Nós
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-500 hover:text-pink transition-colors text-sm">
+                <a href="#" className="text-gray-500 hover:text-gold transition-colors text-sm">
                   Como Funciona
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-500 hover:text-pink transition-colors text-sm">
+                <a href="#" className="text-gray-500 hover:text-gold transition-colors text-sm">
                   Depoimentos
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-500 hover:text-pink transition-colors text-sm">
+                <a href="#" className="text-gray-500 hover:text-gold transition-colors text-sm">
                   Perguntas Frequentes
                 </a>
               </li>
@@ -70,15 +70,15 @@ export const Footer = () => {
             <h3 className="text-white font-semibold text-base">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-gray-500 text-sm">
-                <Mail className="w-4 h-4 text-pink flex-shrink-0" />
+                <Mail className="w-4 h-4 text-gold flex-shrink-0" />
                 <span>contato@phoenixhair.com.br</span>
               </li>
               <li className="flex items-center gap-3 text-gray-500 text-sm">
-                <Phone className="w-4 h-4 text-pink flex-shrink-0" />
+                <Phone className="w-4 h-4 text-gold flex-shrink-0" />
                 <span>(11) 9 9999-9999</span>
               </li>
               <li className="flex items-center gap-3 text-gray-500 text-sm">
-                <MapPin className="w-4 h-4 text-pink flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-gold flex-shrink-0" />
                 <span>São Paulo, Brasil</span>
               </li>
             </ul>
@@ -92,19 +92,19 @@ export const Footer = () => {
             <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6">
               <a 
                 href="#" 
-                className="text-gray-500 hover:text-pink transition-colors text-sm"
+                className="text-gray-500 hover:text-gold transition-colors text-sm"
               >
                 Política de Privacidade
               </a>
               <a 
                 href="#" 
-                className="text-gray-500 hover:text-pink transition-colors text-sm"
+                className="text-gray-500 hover:text-gold transition-colors text-sm"
               >
                 Termos de Uso
               </a>
               <a 
                 href="#" 
-                className="text-gray-500 hover:text-pink transition-colors text-sm"
+                className="text-gray-500 hover:text-gold transition-colors text-sm"
               >
                 Política de Reembolso
               </a>
