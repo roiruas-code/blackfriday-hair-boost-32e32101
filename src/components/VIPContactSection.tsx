@@ -6,14 +6,14 @@ export const VIPContactSection = () => {
   };
 
   return (
-    <section id="contato" className="relative py-8 md:py-12 px-4 bg-black scroll-mt-4">
+    <section id="contato" className="relative py-4 md:py-6 px-3 bg-black scroll-mt-4">
       <div className="max-w-4xl mx-auto">
         <div className="relative">
           {/* Golden border glow */}
           <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20"></div>
           
           {/* Main container */}
-          <div className="relative bg-black border-2 border-gold/60 rounded-3xl p-6 md:p-10 text-center space-y-4 md:space-y-6">
+          <div className="relative bg-black border-2 border-gold/60 rounded-3xl p-4 md:p-8 text-center space-y-3 md:space-y-4">
             {/* Title */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
               <span className="text-white">Ainda tem </span>
@@ -23,7 +23,7 @@ export const VIPContactSection = () => {
             </h2>
 
             {/* Description */}
-            <div className="space-y-2 md:space-y-3">
+            <div className="space-y-1 md:space-y-2">
               <p className="text-base md:text-lg text-gray-400 leading-relaxed px-4">
                 Nossa equipe está pronta para tirar todas as suas dúvidas sobre os nossos produtos.
               </p>
@@ -33,7 +33,7 @@ export const VIPContactSection = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center pt-1">
               <div className="relative">
                 {/* Animated glow effect */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>

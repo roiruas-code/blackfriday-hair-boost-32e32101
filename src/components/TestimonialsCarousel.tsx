@@ -33,16 +33,16 @@ export const TestimonialsCarousel = () => {
   };
 
   return (
-    <section id="resultados" className="relative py-8 md:py-12 px-4 bg-black scroll-mt-4">
+    <section id="resultados" className="relative py-4 md:py-6 px-3 bg-black scroll-mt-4">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-6 md:mb-8 animate-fade-in">
-          <div className="flex items-center justify-center gap-1 mb-2 md:mb-3">
+        <div className="text-center mb-4 md:mb-6 animate-fade-in">
+          <div className="flex items-center justify-center gap-1 mb-1 md:mb-2">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-gold text-gold" />
             ))}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold mb-1 md:mb-2">
             <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
               Resultados Reais
             </span>
@@ -124,7 +124,7 @@ export const TestimonialsCarousel = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 mt-4 md:mt-6">
           {[
             { value: "+50mil", label: "Clientes Satisfeitos" },
             { value: "4.9★", label: "Avaliação Média" },
@@ -133,9 +133,9 @@ export const TestimonialsCarousel = () => {
           ].map((stat, index) => (
             <div
               key={index}
-              className="text-center p-4 md:p-5 rounded-xl bg-gradient-to-br from-black/50 to-primary/30 border border-gold/20 backdrop-blur-sm hover:border-gold/50 transition-all duration-300 hover:scale-105"
+              className="text-center p-3 md:p-4 rounded-xl bg-gradient-to-br from-black/50 to-primary/30 border border-gold/20 backdrop-blur-sm hover:border-gold/50 transition-all duration-300 hover:scale-105"
             >
-              <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent mb-1">
+              <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent mb-0.5">
                 {stat.value}
               </div>
               <div className="text-xs md:text-sm text-muted-foreground">{stat.label}</div>

@@ -41,9 +41,9 @@ export const VIPHeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-3 py-4 md:py-6 bg-black">
       {/* Logo */}
-      <div className="mb-4 md:mb-6 animate-fade-in relative flex justify-center items-center">
+      <div className="mb-3 md:mb-4 animate-fade-in relative flex justify-center items-center">
         {/* Rotating golden ring around entire logo */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-2 border-gold/30 animate-[spin_8s_linear_infinite]">
@@ -93,8 +93,8 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="mb-6 md:mb-8 animate-fade-in">
-        <div className="text-center space-y-2 md:space-y-3">
+      <div className="mb-3 md:mb-4 animate-fade-in">
+        <div className="text-center space-y-1 md:space-y-2">
           {/* "Faltam" text */}
           <div className="text-gold text-base md:text-xl font-semibold tracking-wide">
             Faltam:
@@ -158,7 +158,7 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Badge */}
-      <div className="mb-4 md:mb-5 animate-fade-in">
+      <div className="mb-2 md:mb-3 animate-fade-in">
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full blur-sm opacity-75"></div>
           <div className="relative px-5 py-2 bg-black rounded-full border-2 border-transparent bg-clip-padding">
@@ -169,7 +169,7 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Main Title */}
-      <div className="max-w-5xl mx-auto text-center space-y-2 md:space-y-3 mb-4 md:mb-6">
+      <div className="max-w-5xl mx-auto text-center space-y-1 md:space-y-2 mb-3 md:mb-4">
         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight">
           <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
             A Black Friday que você esperava.
@@ -184,7 +184,7 @@ export const VIPHeroSection = () => {
         </p>
 
         {/* Date Badge */}
-        <div className="flex justify-center pt-2">
+        <div className="flex justify-center pt-1">
           <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
             <Calendar className="w-4 h-4 text-gold" />
             <span className="text-white text-xs md:text-sm">
