@@ -5,14 +5,14 @@ export const Footer = () => {
 
   return (
     <footer className="relative bg-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 py-8 md:py-10">
+      <div className="max-w-7xl mx-auto px-3 py-6 md:py-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4">
 
           {/* Instagram Links */}
-          <div className="space-y-3">
+          <div className="space-y-2">
             <h3 className="text-white font-semibold text-base">Siga-nos</h3>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <a 
                 href="https://www.instagram.com/phoenixhairoficial?igsh=MWg3Z3dzMDlhcGowNQ==" 
                 target="_blank"
@@ -39,9 +39,9 @@ export const Footer = () => {
           </div>
 
           {/* Contact Section */}
-          <div className="space-y-3">
+          <div className="space-y-2">
             <h3 className="text-white font-semibold text-base">Contato</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               <li className="flex items-center gap-3 text-gray-500 text-sm">
                 <Mail className="w-4 h-4 text-gold flex-shrink-0" />
                 <span>suporte@phoenixhair.com.br</span>
@@ -59,9 +59,9 @@ export const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 pt-6">
+        <div className="border-t border-white/10 pt-4">
           {/* Legal Links */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-3">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 mb-2">
             <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6">
               <a 
                 href="#" 

@@ -6,7 +6,7 @@ export const VIPAuthoritySection = () => {
   };
 
   return (
-    <section id="sobre" className="relative py-8 md:py-12 px-4 bg-black scroll-mt-4">
+    <section id="sobre" className="relative py-4 md:py-6 px-3 bg-black scroll-mt-4">
       <div className="max-w-4xl mx-auto">
         {/* Container with golden border */}
         <div className="relative">
@@ -14,8 +14,8 @@ export const VIPAuthoritySection = () => {
           <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20"></div>
           
           {/* Main content */}
-          <div className="relative bg-black border-2 border-gold/60 rounded-3xl p-6 md:p-10">
-            <div className="space-y-4 md:space-y-6">
+          <div className="relative bg-black border-2 border-gold/60 rounded-3xl p-4 md:p-8">
+            <div className="space-y-3 md:space-y-4">
               {/* Image in circular frame */}
               <div className="flex justify-center animate-fade-in">
                 <div className="relative w-28 h-28 md:w-36 md:h-36">
@@ -35,7 +35,7 @@ export const VIPAuthoritySection = () => {
               </div>
 
               {/* Title */}
-              <div className="space-y-2 md:space-y-3 text-center">
+              <div className="space-y-1 md:space-y-2 text-center">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                   <span className="text-white">O propósito Phoenix é </span>
                   <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
@@ -47,7 +47,7 @@ export const VIPAuthoritySection = () => {
               </div>
 
               {/* Description */}
-              <div className="max-w-2xl mx-auto space-y-3 text-gray-400 text-sm md:text-base leading-relaxed text-center">
+              <div className="max-w-2xl mx-auto space-y-2 text-gray-400 text-sm md:text-base leading-relaxed text-center">
                 <p>
                   Nosso propósito é devolver a vitalidade e a confiança para mulheres que querem viver plenamente cada fase da vida.
                 </p>
@@ -69,7 +69,7 @@ export const VIPAuthoritySection = () => {
               </div>
 
               {/* Highlight Text */}
-              <div className="pt-1 text-center">
+              <div className="pt-0 text-center">
                 <p className="text-base md:text-lg font-bold">
                   <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                     Porque você pode, merece e vai viver com muito mais vitalidade e{" "}
@@ -79,7 +79,7 @@ export const VIPAuthoritySection = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="pt-2 md:pt-3 text-center">
+              <div className="pt-1 md:pt-2 text-center">
                 <div className="relative inline-block">
                   {/* Animated glow effect */}
                   <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
