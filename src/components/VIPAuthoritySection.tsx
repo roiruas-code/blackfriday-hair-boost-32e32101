@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import drAfonsoExpert from "@/assets/dr-afonso-expert.png";
 
 export const VIPAuthoritySection = () => {
   const handleCTA = () => {
@@ -6,79 +6,101 @@ export const VIPAuthoritySection = () => {
   };
 
   return (
-    <section className="relative py-24 px-6 bg-black">
-      <div className="max-w-4xl mx-auto text-center space-y-12">
-        {/* Icon */}
-        <div className="flex justify-center animate-fade-in">
-          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-gold/20 to-gold-dark/20 flex items-center justify-center backdrop-blur-sm">
-            <Heart className="w-12 h-12 text-gold" fill="currentColor" />
-          </div>
-        </div>
+    <section className="relative py-16 px-6 bg-black">
+      <div className="max-w-4xl mx-auto">
+        {/* Container with golden border */}
+        <div className="relative">
+          {/* Glow effect */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20"></div>
+          
+          {/* Main content */}
+          <div className="relative bg-black border-2 border-gold/60 rounded-3xl p-8 md:p-12">
+            <div className="space-y-8">
+              {/* Image in circular frame */}
+              <div className="flex justify-center animate-fade-in">
+                <div className="relative w-32 h-32 md:w-40 md:h-40">
+                  {/* Golden ring */}
+                  <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-gold-dark via-gold to-gold-light opacity-30 blur-md"></div>
+                  <div className="absolute -inset-1 rounded-full border-2 border-gold/60"></div>
+                  
+                  {/* Image */}
+                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gold/10 to-gold-dark/10">
+                    <img 
+                      src={drAfonsoExpert} 
+                      alt="Dr. Afonso Cruz - Expert em Saúde Capilar"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
 
-        {/* Title */}
-        <div className="space-y-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            <span className="text-white">O propósito Phoenix é </span>
-            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-              Transformar Sua Saúde
-            </span>
-            <br />
-            <span className="text-white">de Dentro Pra Fora!</span>
-          </h2>
-        </div>
+              {/* Title */}
+              <div className="space-y-4 text-center">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                  <span className="text-white">O propósito Phoenix é </span>
+                  <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+                    Transformar Sua Saúde
+                  </span>
+                  <br />
+                  <span className="text-white">de Dentro Pra Fora!</span>
+                </h2>
+              </div>
 
-        {/* Description */}
-        <div className="max-w-3xl mx-auto space-y-6 text-gray-400 text-base md:text-lg leading-relaxed">
-          <p>
-            Nosso propósito é devolver a vitalidade e a confiança para mulheres que querem viver plenamente cada fase da vida.
-          </p>
-          <p>
-            Sabemos que após os 50, o corpo muda - e com essas mudanças vêm desafios que muitas vezes nos fazem sentir invisíveis ou menos capazes.
-          </p>
-          <p className="font-semibold text-white text-xl">
-            Mas a verdade é outra: essa é a sua melhor fase.
-          </p>
-          <p>
-            Temos como objetivo levar mais saúde, energia e bem-estar, para que você aproveite cada momento com qualidade, liberdade e alegria - do jeito que você merece.
-          </p>
-          <p className="text-sm text-gray-500">
-            Fazemos isso através de conhecimento sobre saúde integral e suplementos que restauram seu corpo de dentro pra fora - cuidando da sua pele, cabelos, articulações, energia, memória e muito mais.
-          </p>
-          <p className="text-sm font-medium text-white mt-4">
-            Tudo de forma acessível, justa e honesta.
-          </p>
-        </div>
+              {/* Description */}
+              <div className="max-w-2xl mx-auto space-y-4 text-gray-400 text-sm md:text-base leading-relaxed text-center">
+                <p>
+                  Nosso propósito é devolver a vitalidade e a confiança para mulheres que querem viver plenamente cada fase da vida.
+                </p>
+                <p>
+                  Sabemos que após os 50, o corpo muda - e com essas mudanças vêm desafios que muitas vezes nos fazem sentir invisíveis ou menos capazes.
+                </p>
+                <p className="font-semibold text-white text-lg">
+                  Mas a verdade é outra: essa é a sua melhor fase.
+                </p>
+                <p>
+                  Temos como objetivo levar mais saúde, energia e bem-estar, para que você aproveite cada momento com qualidade, liberdade e alegria - do jeito que você merece.
+                </p>
+                <p className="text-xs text-gray-500">
+                  Fazemos isso através de conhecimento sobre saúde integral e suplementos que restauram seu corpo de dentro pra fora - cuidando da sua pele, cabelos, articulações, energia, memória e muito mais.
+                </p>
+                <p className="text-sm font-medium text-white">
+                  Tudo de forma acessível, justa e honesta.
+                </p>
+              </div>
 
-        {/* Highlight Text */}
-        <div className="pt-6">
-          <p className="text-xl md:text-2xl font-bold">
-            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-              Porque você pode, merece e vai viver com muito mais vitalidade e{" "}
-            </span>
-            <span className="text-gold">autoestima.</span>
-          </p>
-        </div>
+              {/* Highlight Text */}
+              <div className="pt-2 text-center">
+                <p className="text-lg md:text-xl font-bold">
+                  <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+                    Porque você pode, merece e vai viver com muito mais vitalidade e{" "}
+                  </span>
+                  <span className="text-gold">autoestima.</span>
+                </p>
+              </div>
 
-        {/* CTA Button */}
-        <div className="pt-8">
-          <div className="relative inline-block">
-            {/* Animated glow effect */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
-            
-            <button
-              onClick={handleCTA}
-              className="group relative px-10 py-4 text-white font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
-            >
-              {/* Shine effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              
-              <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light"></div>
-              <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
-              <span className="relative z-10 flex items-center gap-2 text-gold group-hover:text-black transition-colors">
-                <span>✨</span>
-                Nos vemos no grupo!
-              </span>
-            </button>
+              {/* CTA Button */}
+              <div className="pt-4 text-center">
+                <div className="relative inline-block">
+                  {/* Animated glow effect */}
+                  <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
+                  
+                  <button
+                    onClick={handleCTA}
+                    className="group relative px-8 md:px-10 py-3 md:py-4 text-white font-bold text-base md:text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
+                  >
+                    {/* Shine effect on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light"></div>
+                    <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
+                    <span className="relative z-10 flex items-center gap-2 text-gold group-hover:text-black transition-colors">
+                      <span>✨</span>
+                      Nos vemos no grupo!
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
