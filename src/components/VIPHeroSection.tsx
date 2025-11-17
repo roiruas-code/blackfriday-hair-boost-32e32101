@@ -41,9 +41,9 @@ export const VIPHeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-6 md:py-8 bg-black">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-2 md:py-4 bg-black">
       {/* Logo */}
-      <div className="mb-6 md:mb-8 animate-fade-in relative flex justify-center items-center">
+      <div className="mb-2 md:mb-3 animate-fade-in relative flex justify-center items-center">
         {/* Rotating golden ring around entire logo */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-2 border-gold/30 animate-[spin_8s_linear_infinite]">
@@ -93,25 +93,25 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="mt-6 md:mt-8 mb-5 md:mb-6 animate-fade-in">
-        <div className="text-center space-y-2 md:space-y-3">
+      <div className="mt-2 md:mt-3 mb-2 md:mb-3 animate-fade-in">
+        <div className="text-center space-y-1 md:space-y-2">
           {/* "Faltam" text */}
-          <div className="text-xl md:text-3xl font-serif font-bold tracking-wider mb-3 md:mb-4">
+          <div className="text-lg md:text-2xl font-serif font-bold tracking-wider mb-2">
             <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent" style={{ filter: 'drop-shadow(0 0 15px rgba(255, 215, 0, 0.5))' }}>
               FALTAM:
             </span>
           </div>
           
           {/* Timer boxes */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+          <div className="flex flex-wrap justify-center gap-1 md:gap-2">
             {/* Days */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[140px]">
-                <div className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-2 md:p-4 min-w-[60px] md:min-w-[100px]">
+                <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                   {String(timeLeft.days).padStart(2, "0")}
                 </div>
-                <div className="text-xs md:text-base text-gray-400 mt-1 md:mt-2 uppercase tracking-wide md:tracking-widest">
+                <div className="text-[10px] md:text-sm text-gray-400 mt-0.5 md:mt-1 uppercase tracking-wide md:tracking-widest">
                   Dias
                 </div>
               </div>
@@ -120,11 +120,11 @@ export const VIPHeroSection = () => {
             {/* Hours */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[140px]">
-                <div className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-2 md:p-4 min-w-[60px] md:min-w-[100px]">
+                <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                   {String(timeLeft.hours).padStart(2, "0")}
                 </div>
-                <div className="text-xs md:text-base text-gray-400 mt-1 md:mt-2 uppercase tracking-wide md:tracking-widest">
+                <div className="text-[10px] md:text-sm text-gray-400 mt-0.5 md:mt-1 uppercase tracking-wide md:tracking-widest">
                   Horas
                 </div>
               </div>
@@ -133,11 +133,11 @@ export const VIPHeroSection = () => {
             {/* Minutes */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[140px]">
-                <div className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-2 md:p-4 min-w-[60px] md:min-w-[100px]">
+                <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
                   {String(timeLeft.minutes).padStart(2, "0")}
                 </div>
-                <div className="text-xs md:text-base text-gray-400 mt-1 md:mt-2 uppercase tracking-wide md:tracking-widest">
+                <div className="text-[10px] md:text-sm text-gray-400 mt-0.5 md:mt-1 uppercase tracking-wide md:tracking-widest">
                   Min
                 </div>
               </div>
@@ -146,11 +146,11 @@ export const VIPHeroSection = () => {
             {/* Seconds */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-xl md:rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-3 md:p-8 min-w-[70px] md:min-w-[140px]">
-                <div className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent animate-pulse">
+              <div className="relative bg-black border-2 border-gold/40 rounded-xl md:rounded-2xl p-2 md:p-4 min-w-[60px] md:min-w-[100px]">
+                <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent animate-pulse">
                   {String(timeLeft.seconds).padStart(2, "0")}
                 </div>
-                <div className="text-xs md:text-base text-gray-400 mt-1 md:mt-2 uppercase tracking-wide md:tracking-widest">
+                <div className="text-[10px] md:text-sm text-gray-400 mt-0.5 md:mt-1 uppercase tracking-wide md:tracking-widest">
                   Seg
                 </div>
               </div>
@@ -160,19 +160,19 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Badge */}
-      <div className="mb-4 md:mb-5 animate-fade-in">
+      <div className="mb-2 md:mb-3 animate-fade-in">
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full blur-sm opacity-75"></div>
-          <div className="relative px-5 py-2 bg-black rounded-full border-2 border-transparent bg-clip-padding">
+          <div className="relative px-4 py-1.5 bg-black rounded-full border-2 border-transparent bg-clip-padding">
             <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-100" style={{ margin: '-2px', zIndex: -1 }}></div>
-            <span className="text-white font-semibold text-xs md:text-sm tracking-wide">Black Week Phoenix</span>
+            <span className="text-white font-semibold text-xs tracking-wide">Black Week Phoenix</span>
           </div>
         </div>
       </div>
 
       {/* Main Title */}
-      <div className="max-w-5xl mx-auto text-center space-y-2 md:space-y-3 mb-5 md:mb-6">
-        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-tight">
+      <div className="max-w-5xl mx-auto text-center space-y-1 md:space-y-2 mb-2 md:mb-3">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
           <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
             A Black Friday que você esperava.
           </span>{" "}
@@ -181,15 +181,15 @@ export const VIPHeroSection = () => {
           </span>
         </h1>
         
-        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto px-4">
+        <p className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto px-4">
           Entre para a lista VIP e garanta acesso antecipado aos melhores descontos para o fim da queda e crescimento capilar.
         </p>
 
         {/* Date Badge */}
-        <div className="flex justify-center pt-1">
-          <div className="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-            <Calendar className="w-4 h-4 text-gold" />
-            <span className="text-white text-xs md:text-sm">
+        <div className="flex justify-center pt-0.5">
+          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <Calendar className="w-3 h-3 text-gold" />
+            <span className="text-white text-xs">
               Black Friday <span className="text-gold font-bold">26 de Novembro</span>
             </span>
           </div>
@@ -197,32 +197,32 @@ export const VIPHeroSection = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="mt-6 md:mt-8 flex justify-center">
+      <div className="mt-2 md:mt-3 flex justify-center">
         <button
           onClick={scrollToNextSection}
           className="animate-bounce cursor-pointer group"
           aria-label="Rolar para próxima seção"
         >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-gold text-xs uppercase tracking-wider opacity-70 group-hover:opacity-100 transition-opacity">
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-gold text-[10px] uppercase tracking-wider opacity-70 group-hover:opacity-100 transition-opacity">
               Veja mais
             </span>
-            <div className="w-6 h-10 border-2 border-gold/30 rounded-full flex items-start justify-center p-2 group-hover:border-gold/60 transition-colors">
-              <div className="w-1 h-2 bg-gold rounded-full animate-pulse"></div>
+            <div className="w-5 h-8 border-2 border-gold/30 rounded-full flex items-start justify-center p-1.5 group-hover:border-gold/60 transition-colors">
+              <div className="w-1 h-1.5 bg-gold rounded-full animate-pulse"></div>
             </div>
           </div>
         </button>
       </div>
 
       {/* CTA Button */}
-      <div className="animate-fade-in mt-4">
+      <div className="animate-fade-in mt-2">
         <div className="relative">
           {/* Animated glow effect */}
           <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
           
           <button
             onClick={handleCTA}
-            className="group relative px-8 md:px-12 py-3 md:py-5 text-white font-bold text-base md:text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
+            className="group relative px-6 md:px-8 py-2.5 md:py-3 text-white font-bold text-sm md:text-base rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
           >
             {/* Shine effect on hover */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
