@@ -2,6 +2,7 @@ import { VIPHeroSection } from "@/components/VIPHeroSection";
 import { VIPBeforeAfterCarousel } from "@/components/VIPBeforeAfterCarousel";
 import { VIPBenefitsSection } from "@/components/VIPBenefitsSection";
 import { VIPAuthoritySection } from "@/components/VIPAuthoritySection";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
       <VIPBeforeAfterCarousel />
       <VIPBenefitsSection />
       <VIPAuthoritySection />
+      <Footer />
     </div>
   );
 };

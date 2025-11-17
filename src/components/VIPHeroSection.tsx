@@ -1,29 +1,30 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Clock } from "lucide-react";
+import phoenixLogo from "@/assets/phoenix-logo.png";
 
 export const VIPHeroSection = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 3,
-    hours: 23,
-    minutes: 59,
-    seconds: 45,
-  });
+  const calculateTimeLeft = () => {
+    const eventDate = new Date("2025-11-26T00:00:00");
+    const now = new Date();
+    const difference = eventDate.getTime() - now.getTime();
+
+    if (difference > 0) {
+      return {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else if (prev.days > 0) {
-          return { days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
@@ -37,6 +38,14 @@ export const VIPHeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-b from-black via-primary/10 to-black">
       <div className="max-w-4xl mx-auto text-center space-y-8">
+        {/* Logo */}
+        <div className="flex justify-center mb-8 animate-fade-in">
+          <img 
+            src={phoenixLogo} 
+            alt="Phoenix Hair" 
+            className="h-16 md:h-20 w-auto drop-shadow-2xl"
+          />
+        </div>
         {/* Countdown Timer */}
         <div className="space-y-4">
           <div className="flex items-center justify-center gap-2">
