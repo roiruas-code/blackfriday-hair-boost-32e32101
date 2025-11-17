@@ -38,31 +38,33 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Links Section */}
+          {/* Instagram Links */}
           <div className="space-y-3">
-            <h3 className="text-white font-semibold text-base">Links Úteis</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-500 hover:text-gold transition-colors text-sm">
-                  Sobre Nós
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-500 hover:text-gold transition-colors text-sm">
-                  Como Funciona
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-500 hover:text-gold transition-colors text-sm">
-                  Depoimentos
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-500 hover:text-gold transition-colors text-sm">
-                  Perguntas Frequentes
-                </a>
-              </li>
-            </ul>
+            <h3 className="text-white font-semibold text-base">Siga-nos</h3>
+            <div className="space-y-3">
+              <a 
+                href="https://www.instagram.com/phoenixhairoficial?igsh=MWg3Z3dzMDlhcGowNQ==" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-500 hover:text-gold transition-colors text-sm group"
+              >
+                <div className="w-9 h-9 bg-white/5 group-hover:bg-gold/20 rounded-full flex items-center justify-center transition-all group-hover:scale-110 border border-white/5">
+                  <Instagram className="w-4 h-4" />
+                </div>
+                <span>Phoenix Hair Oficial</span>
+              </a>
+              <a 
+                href="https://www.instagram.com/metodoafonso?igsh=MXF6bmJybTMzcDNsZg==" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-500 hover:text-gold transition-colors text-sm group"
+              >
+                <div className="w-9 h-9 bg-white/5 group-hover:bg-gold/20 rounded-full flex items-center justify-center transition-all group-hover:scale-110 border border-white/5">
+                  <Instagram className="w-4 h-4" />
+                </div>
+                <span>Método Afonso (Expert)</span>
+              </a>
+            </div>
           </div>
 
           {/* Contact Section */}
