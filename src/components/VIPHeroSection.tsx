@@ -44,17 +44,22 @@ export const VIPHeroSection = () => {
     <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 md:py-12 bg-black">
       {/* Logo */}
       <div className="mb-4 md:mb-6 animate-fade-in relative flex justify-center items-center">
+        {/* Rotating golden ring */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full border-2 border-gold/30 animate-[spin_8s_linear_infinite]">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gold shadow-lg shadow-gold/50"></div>
+          </div>
+        </div>
+        
         {/* Animated glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light opacity-40 blur-3xl animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light opacity-20 blur-3xl animate-pulse"></div>
         
         <img 
           src={phoenixLogo} 
           alt="Phoenix Hair" 
-          className="h-40 md:h-56 lg:h-64 xl:h-72 w-auto drop-shadow-2xl relative z-10 animate-[pulse_3s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300 object-contain"
+          className="h-40 md:h-56 lg:h-64 xl:h-72 w-auto relative z-10 animate-[pulse_3s_ease-in-out_infinite] hover:scale-105 transition-transform duration-300 object-contain"
           style={{
-            filter: 'drop-shadow(0 0 30px rgba(255, 215, 0, 0.6))',
-            mixBlendMode: 'normal',
-            background: 'transparent'
+            filter: 'drop-shadow(0 0 30px rgba(255, 215, 0, 0.4))'
           }}
         />
       </div>
