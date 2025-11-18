@@ -12,9 +12,9 @@ const Index = () => {
       <VIPHeroSection />
       <ResultsSection />
       <VIPBenefitsSection />
-      <VIPContactSection />
       <TestimonialsCarousel />
       <VIPAuthoritySection />
+      <VIPContactSection />
       <Footer />
     </div>
   );
