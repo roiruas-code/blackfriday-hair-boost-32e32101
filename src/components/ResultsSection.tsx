@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -23,8 +24,61 @@ const beforeAfterImages = [
 ];
 
 export const ResultsSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [clients, setClients] = useState(0);
+  const [rating, setRating] = useState(0);
+  const [success, setSuccess] = useState(0);
+  const [guarantee, setGuarantee] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const stepDuration = duration / steps;
+
+    let currentStep = 0;
+    const interval = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+      
+      setClients(Math.floor(50000 * progress));
+      setRating(parseFloat((4.9 * progress).toFixed(1)));
+      setSuccess(Math.floor(98 * progress));
+      setGuarantee(Math.floor(30 * progress));
+
+      if (currentStep >= steps) {
+        clearInterval(interval);
+        setClients(50000);
+        setRating(4.9);
+        setSuccess(98);
+        setGuarantee(30);
+      }
+    }, stepDuration);
+
+    return () => clearInterval(interval);
+  }, [isVisible]);
+
   return (
-    <section className="relative py-12 md:py-20 px-4 bg-black scroll-mt-4">
+    <section ref={sectionRef} className="relative py-12 md:py-20 px-4 bg-black scroll-mt-4">
       <div className="max-w-6xl mx-auto">
         {/* Stars */}
         <div className="flex justify-center gap-2 mb-6 animate-fade-in">
@@ -77,27 +131,49 @@ export const ResultsSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
           {/* Clientes Satisfeitos */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20" />
-            <div className="relative bg-black border-2 border-gold/40 rounded-3xl p-8 text-center hover:border-gold/60 transition-all duration-300">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent mb-2">
-                +50mil
+            <div className="relative bg-black border-2 border-gold/40 rounded-3xl p-4 md:p-8 text-center hover:border-gold/60 transition-all duration-300">
+              <div className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent mb-1 md:mb-2">
+                +{clients >= 1000 ? `${Math.floor(clients / 1000)}mil` : clients}
               </div>
-              <div className="text-gray-400 text-lg">Clientes Satisfeitos</div>
+              <div className="text-gray-400 text-sm md:text-lg">Clientes Satisfeitos</div>
             </div>
           </div>
 
           {/* Avaliação Média */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20" />
-            <div className="relative bg-black border-2 border-gold/40 rounded-3xl p-8 text-center hover:border-gold/60 transition-all duration-300">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent mb-2 flex items-center justify-center gap-2">
-                4.9
-                <Star className="w-10 h-10 fill-gold text-gold" />
+            <div className="relative bg-black border-2 border-gold/40 rounded-3xl p-4 md:p-8 text-center hover:border-gold/60 transition-all duration-300">
+              <div className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent mb-1 md:mb-2 flex items-center justify-center gap-1 md:gap-2">
+                {rating.toFixed(1)}
+                <Star className="w-6 h-6 md:w-10 md:h-10 fill-gold text-gold" />
               </div>
-              <div className="text-gray-400 text-lg">Avaliação Média</div>
+              <div className="text-gray-400 text-sm md:text-lg">Avaliação Média</div>
+            </div>
+          </div>
+
+          {/* Taxa de Sucesso */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20" />
+            <div className="relative bg-black border-2 border-gold/40 rounded-3xl p-4 md:p-8 text-center hover:border-gold/60 transition-all duration-300">
+              <div className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent mb-1 md:mb-2">
+                {success}%
+              </div>
+              <div className="text-gray-400 text-sm md:text-lg">Taxa de Sucesso</div>
+            </div>
+          </div>
+
+          {/* Garantia Total */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl blur opacity-20" />
+            <div className="relative bg-black border-2 border-gold/40 rounded-3xl p-4 md:p-8 text-center hover:border-gold/60 transition-all duration-300">
+              <div className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent mb-1 md:mb-2">
+                {guarantee} dias
+              </div>
+              <div className="text-gray-400 text-sm md:text-lg">Garantia Total</div>
             </div>
           </div>
         </div>
