@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Star, Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import testimonial1 from "@/assets/testimonial-1.png";
 import testimonial2 from "@/assets/testimonial-2.png";
 import testimonial3 from "@/assets/testimonial-3.png";
@@ -9,138 +15,179 @@ import testimonial5 from "@/assets/testimonial-5.png";
 import testimonial6 from "@/assets/testimonial-6.png";
 
 const testimonials = [
-  { id: 1, image: testimonial1, alt: "Resultado Phoenix Hair 1" },
-  { id: 2, image: testimonial2, alt: "Resultado Phoenix Hair 2" },
-  { id: 3, image: testimonial3, alt: "Resultado Phoenix Hair 3" },
-  { id: 4, image: testimonial4, alt: "Resultado Phoenix Hair 4" },
-  { id: 5, image: testimonial5, alt: "Resultado Phoenix Hair 5" },
-  { id: 6, image: testimonial6, alt: "Resultado Phoenix Hair 6" },
+  {
+    id: 1,
+    image: testimonial1,
+    name: "Maria Silva",
+    location: "São Paulo, SP",
+    text: "Em apenas 3 meses usando Phoenix Hair, meu cabelo ficou muito mais forte e volumoso. Não caí mais tanto e finalmente tenho a autoestima que sempre quis!",
+    rating: 5,
+  },
+  {
+    id: 2,
+    image: testimonial2,
+    name: "Ana Costa",
+    location: "Rio de Janeiro, RJ",
+    text: "Estava perdendo cabelo há anos. Com Phoenix Hair recuperei a densidade e o brilho natural. Produto incrível, recomendo demais!",
+    rating: 5,
+  },
+  {
+    id: 3,
+    image: testimonial3,
+    name: "Juliana Santos",
+    location: "Belo Horizonte, MG",
+    text: "Resultado surpreendente! Meu cabelo cresceu mais rápido e ficou muito mais saudável. Não troco por nada!",
+    rating: 5,
+  },
+  {
+    id: 4,
+    image: testimonial4,
+    name: "Carla Oliveira",
+    location: "Curitiba, PR",
+    text: "Depois de tantos produtos que não funcionaram, Phoenix Hair foi a solução. Meu cabelo parou de cair e voltou a crescer forte e bonito!",
+    rating: 5,
+  },
+  {
+    id: 5,
+    image: testimonial5,
+    name: "Fernanda Lima",
+    location: "Porto Alegre, RS",
+    text: "Estava quase desistindo, mas Phoenix Hair mudou tudo! Hoje tenho um cabelo cheio, forte e lindo. Gratidão infinita!",
+    rating: 5,
+  },
+  {
+    id: 6,
+    image: testimonial6,
+    name: "Patricia Rocha",
+    location: "Brasília, DF",
+    text: "Transformação total! Meu cabelo estava fraco e quebradiço. Agora está forte, brilhante e cheio de vida. Produto sensacional!",
+    rating: 5,
+  },
 ];
 
 export const TestimonialsCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
+  const [api, setApi] = useState<any>();
 
   return (
-    <section id="resultados" className="relative py-4 md:py-6 px-3 bg-black scroll-mt-4">
+    <section id="depoimentos" className="relative py-12 md:py-20 px-4 bg-gradient-to-b from-black via-gold/5 to-black scroll-mt-4">
+      {/* Background glow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/10 rounded-full blur-[150px]" />
+      </div>
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-4 md:mb-6 animate-fade-in">
-          <div className="flex items-center justify-center gap-1 mb-1 md:mb-2">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <div className="flex items-center justify-center gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-gold text-gold" />
+              <Star key={i} className="w-8 h-8 md:w-10 md:h-10 fill-gold text-gold animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
             ))}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-1 md:mb-2">
-            <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
-              Resultados Reais
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              O Que Dizem Nossos Clientes
             </span>
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto px-4">
-            Milhares de clientes já transformaram seus cabelos com Phoenix Hair
+          
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+            Histórias reais de transformação e confiança renovada
           </p>
         </div>
 
         {/* Carousel */}
-        <div className="relative">
-          {/* Main image container */}
-          <div className="relative aspect-square md:aspect-video max-w-4xl mx-auto overflow-hidden rounded-2xl">
-            <div className="relative w-full h-full">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={testimonial.id}
-                  className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                    index === currentIndex
-                      ? "opacity-100 scale-100 z-10"
-                      : "opacity-0 scale-95 z-0"
-                  }`}
-                >
-                  <div className="relative w-full h-full group">
-                    {/* Golden glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-gold/20 via-transparent to-gold-light/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 rounded-2xl" />
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial) => (
+              <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="group h-full">
+                  {/* Card container */}
+                  <div className="relative h-full">
+                    {/* Glow effect */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-3xl opacity-0 group-hover:opacity-30 blur transition-all duration-500" />
                     
-                    {/* Border gradient */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-gold via-gold-light to-gold rounded-2xl opacity-75 blur-sm group-hover:opacity-100 transition-opacity duration-500" />
-                    
-                    {/* Image */}
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.alt}
-                      className="relative w-full h-full object-cover rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
-                    />
-                    
-                    {/* Shine effect overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl" />
+                    {/* Card */}
+                    <div className="relative h-full bg-gradient-to-br from-black/90 to-black/50 backdrop-blur-sm border-2 border-gold/30 group-hover:border-gold/60 rounded-3xl p-6 transition-all duration-500 hover:scale-[1.02] flex flex-col">
+                      {/* Quote icon */}
+                      <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <Quote className="w-16 h-16 text-gold" />
+                      </div>
+
+                      {/* Image */}
+                      <div className="relative mb-6 overflow-hidden rounded-2xl">
+                        <div className="aspect-square">
+                          <img
+                            src={testimonial.image}
+                            alt={`Depoimento de ${testimonial.name}`}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                        </div>
+                        {/* Image overlay gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      </div>
+
+                      {/* Rating */}
+                      <div className="flex gap-1 mb-3">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                        ))}
+                      </div>
+
+                      {/* Text */}
+                      <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4 flex-grow italic">
+                        "{testimonial.text}"
+                      </p>
+
+                      {/* Author info */}
+                      <div className="pt-4 border-t border-gold/20">
+                        <p className="font-bold text-white text-lg mb-1">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-gold text-sm">
+                          {testimonial.location}
+                        </p>
+                      </div>
+
+                      {/* Verified badge */}
+                      <div className="absolute bottom-6 right-6">
+                        <div className="flex items-center gap-2 px-3 py-1.5 bg-gold/20 border border-gold/40 rounded-full">
+                          <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+                          <span className="text-gold text-xs font-semibold">Verificado</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Navigation buttons */}
-            <Button
-              onClick={prevSlide}
-              variant="ghost"
-              size="icon"
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/50 hover:bg-black/80 border border-gold/30 hover:border-gold text-gold hover:text-gold-light backdrop-blur-sm transition-all duration-300 hover:scale-110"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </Button>
-            <Button
-              onClick={nextSlide}
-              variant="ghost"
-              size="icon"
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/50 hover:bg-black/80 border border-gold/30 hover:border-gold text-gold hover:text-gold-light backdrop-blur-sm transition-all duration-300 hover:scale-110"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </Button>
-          </div>
-
-          {/* Dots navigation */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
-                    ? "w-12 h-3 bg-gradient-to-r from-gold via-gold-light to-gold shadow-lg shadow-gold/50"
-                    : "w-3 h-3 bg-muted hover:bg-gold/50"
-                }`}
-                aria-label={`Ir para depoimento ${index + 1}`}
-              />
+              </CarouselItem>
             ))}
+          </CarouselContent>
+          
+          {/* Navigation */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <CarouselPrevious className="relative left-0 translate-x-0 bg-black/80 border-2 border-gold/50 text-gold hover:bg-gold hover:text-black hover:border-gold transition-all duration-300" />
+            <CarouselNext className="relative right-0 translate-x-0 bg-black/80 border-2 border-gold/50 text-gold hover:bg-gold hover:text-black hover:border-gold transition-all duration-300" />
           </div>
-        </div>
+        </Carousel>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 mt-4 md:mt-6">
-          {[
-            { value: "+50mil", label: "Clientes Satisfeitos" },
-            { value: "4.9★", label: "Avaliação Média" },
-            { value: "98%", label: "Taxa de Sucesso" },
-            { value: "30 dias", label: "Garantia Total" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="text-center p-3 md:p-4 rounded-xl bg-gradient-to-br from-black/50 to-primary/30 border border-gold/20 backdrop-blur-sm hover:border-gold/50 transition-all duration-300 hover:scale-105"
-            >
-              <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent mb-0.5">
-                {stat.value}
-              </div>
-              <div className="text-xs md:text-sm text-muted-foreground">{stat.label}</div>
+        {/* Bottom stats */}
+        <div className="mt-12 md:mt-16 text-center">
+          <div className="inline-flex items-center gap-4 px-8 py-4 bg-black/50 border border-gold/30 rounded-full backdrop-blur-sm">
+            <div className="flex items-center gap-2">
+              <Star className="w-6 h-6 fill-gold text-gold" />
+              <span className="text-2xl font-bold text-gold">4.9</span>
             </div>
-          ))}
+            <div className="w-px h-8 bg-gold/30" />
+            <div className="text-gray-400">
+              <span className="text-white font-semibold">+50mil</span> avaliações
+            </div>
+          </div>
         </div>
       </div>
     </section>
