@@ -46,6 +46,10 @@ All colors MUST be HSL.
     --gold-darker: 35 85% 30%;
     --bronze: 30 60% 45%;
     
+    /* CTA Color - Vibrant for maximum attention */
+    --cta: 160 100% 50%; /* Vibrant cyan/turquoise for CTA buttons */
+    --cta-foreground: 0 0% 0%;
+    
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(38 92% 40%), hsl(45 100% 51%), hsl(48 100% 67%));
     --gradient-border: linear-gradient(90deg, hsl(38 92% 40%), hsl(45 100% 51%));
@@ -95,6 +99,9 @@ All colors MUST be HSL.
     --gold-dark: 38 92% 40%;
     --gold-darker: 35 85% 30%;
     --bronze: 30 60% 45%;
+    
+    --cta: 160 100% 50%;
+    --cta-foreground: 0 0% 0%;
     
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 100%;
