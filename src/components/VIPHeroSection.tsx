@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import phoenixLogo from "@/assets/phoenix-logo-new.png";
 
 export const VIPHeroSection = () => {
@@ -216,24 +217,14 @@ export const VIPHeroSection = () => {
 
       {/* CTA Button */}
       <div className="animate-fade-in mt-4 md:mt-5">
-        <div className="relative">
-          {/* Animated glow effect */}
-          <div className="absolute -inset-2 bg-gradient-to-r from-gold-dark via-gold to-gold-light rounded-full opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500 animate-pulse"></div>
-          
-          <button
-            onClick={handleCTA}
-            className="group relative px-8 md:px-10 py-3.5 md:py-4 text-white font-bold text-sm md:text-base rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
-          >
-            {/* Shine effect on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-            
-            <div className="absolute inset-0 bg-gradient-to-r from-gold-dark via-gold to-gold-light"></div>
-            <div className="absolute inset-[2px] bg-black rounded-full transition-opacity group-hover:opacity-0"></div>
-            <span className="relative z-10 text-gold group-hover:text-black transition-colors">
-              QUERO GARANTIR MEU DESCONTO
-            </span>
-          </button>
-        </div>
+        <Button
+          onClick={handleCTA}
+          variant="cta"
+          size="lg"
+          className="px-8 md:px-10 py-6 md:py-7 text-sm md:text-base font-bold rounded-full"
+        >
+          QUERO GARANTIR MEU DESCONTO
+        </Button>
       </div>
     </section>
   );

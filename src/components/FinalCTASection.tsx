@@ -70,12 +70,13 @@ export const FinalCTASection = () => {
             {/* CTA Button */}
             <div className="space-y-4">
               <Button
+                variant="cta"
                 size="lg"
-                className="w-full md:w-auto bg-gradient-to-r from-gold via-gold-light to-gold hover:from-gold-dark hover:via-gold hover:to-gold-light text-black font-bold text-2xl px-16 py-10 rounded-full shadow-2xl shadow-gold/50 hover:shadow-gold/80 hover:scale-105 transition-all duration-300 group"
+                className="w-full md:w-auto px-12 py-8 text-xl md:text-2xl font-bold rounded-full"
               >
-                <ShoppingCart className="w-8 h-8 mr-3 group-hover:scale-110 transition-transform" />
+                <ShoppingCart className="w-6 h-6 md:w-8 md:h-8 group-hover:scale-110 transition-transform" />
                 GARANTIR MEU DESCONTO AGORA
-                <ArrowRight className="w-8 h-8 ml-3 group-hover:translate-x-2 transition-transform" />
+                <ArrowRight className="w-6 h-6 md:w-8 md:h-8 group-hover:translate-x-2 transition-transform" />
               </Button>
 
               <p className="text-sm text-muted-foreground">
